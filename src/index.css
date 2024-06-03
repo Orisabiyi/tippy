@@ -35,15 +35,28 @@ body {
 .main {
   padding: 3rem;
   background: #fff;
+  width: 65%;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .box {
   display: flex;
-  align-items: center;
   justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
-  gap: 2rem;
+  align-items: stretch;
+  gap: 4rem;
+
+  flex: 0 0 auto;
+  width: calc(50% - 2rem);
+  padding: 5rem 3rem;
+}
+
+.box:nth-of-type(2) {
+  background: var(--very-dark-cyan);
+  border-radius: 2rem;
 }
 
 .box-bill {
@@ -82,14 +95,34 @@ body {
   gap: 0.5rem;
 }
 
+.box-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.box-amount:nth-of-type(2) {
+  margin-bottom: auto;
+}
+
+.box-amount span {
+  display: block;
+}
+
 input {
   border: 0;
   outline: 0;
-  padding: 1rem 2rem;
+  padding: 2rem;
   background: var(--very-light-grayish-cyan);
   border-radius: 0.7rem;
 }
 
 input::-webkit-inner-spin-button {
   display: none;
+}
+
+button {
+  text-transform: uppercase;
+  padding: 2rem 0;
 }
