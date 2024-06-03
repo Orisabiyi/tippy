@@ -1,9 +1,9 @@
-import Box from "./Box";
+import BoxBill from "./BoxBill";
 
 export default function Main() {
   return (
     <div className="main">
-      <Box />
+      <BoxBill />
     </div>
   );
 }

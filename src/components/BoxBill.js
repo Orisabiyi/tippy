@@ -1,4 +1,4 @@
-export default function Box() {
+export default function BoxBill() {
   return (
     <div className="box">
       <div className="box-bill">
