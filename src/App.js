@@ -1,3 +1,4 @@
+import "./index.css";
 import Main from "./components/Main";
 
 export default function App() {
