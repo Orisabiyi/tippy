@@ -5,9 +5,10 @@ export default function BoxBill() {
   const [tip, setTip] = useState(0);
   const [person, setPerson] = useState(0);
 
-  const calculateBill = bill / person;
+  const calculateTip = (bill / person) * (tip / 100);
+  const total = bill / person + calculateTip;
 
-  if (bill && tip && person) console.log(calculateBill);
+  if (bill && tip && person) console.log(total);
 
   return (
     <div className="box">
