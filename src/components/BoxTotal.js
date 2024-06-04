@@ -18,7 +18,7 @@ export default function BoxTotal() {
         <h1>$0.00</h1>
       </div>
 
-      <button>reset</button>
+      <button disabled>reset</button>
     </div>
   );
 }
