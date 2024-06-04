@@ -1,4 +1,8 @@
-export default function BoxTotal() {
+export default function BoxTotal({ bill, tip, person }) {
+  const checkParam = bill && tip && person;
+  const calculateTip = (bill / person) * (tip / 100);
+  const calculateTotal = bill / person + calculateTip;
+
   return (
     <div className="box">
       <div className="box-amount">
@@ -7,7 +11,7 @@ export default function BoxTotal() {
           <span>/ person</span>
         </p>
 
-        <h1>$0.00</h1>
+        <h1>${(checkParam && calculateTip) || "0.00"}</h1>
       </div>
 
       <div className="box-amount">
@@ -15,7 +19,7 @@ export default function BoxTotal() {
           <span>Total</span>
           <span>/ person</span>
         </p>
-        <h1>$0.00</h1>
+        <h1>${(checkParam && calculateTotal) || "0.00"}</h1>
       </div>
 
       <button disabled>reset</button>

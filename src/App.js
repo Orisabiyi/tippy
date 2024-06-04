@@ -9,11 +9,6 @@ export default function App() {
   const [tip, setTip] = useState(0);
   const [person, setPerson] = useState(0);
 
-  const calculateTip = (bill / person) * (tip / 100);
-  const total = bill / person + calculateTip;
-
-  if (bill && tip && person) console.log(total);
-
   return (
     <div className="app">
       <Main>
@@ -24,7 +19,7 @@ export default function App() {
           person={person}
           bill={bill}
         />
-        <BoxTotal />
+        <BoxTotal bill={bill} tip={tip} person={person} />
       </Main>
     </div>
   );

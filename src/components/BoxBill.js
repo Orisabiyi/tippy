@@ -7,7 +7,7 @@ export default function BoxBill({ setBill, setTip, setPerson, bill, person }) {
           type="number"
           id="bill"
           value={bill}
-          onChange={(e) => setBill(e.target.value)}
+          onChange={(e) => setBill(e.target.value && Number(e.target.value))}
         />
       </div>
 
@@ -36,7 +36,7 @@ export default function BoxBill({ setBill, setTip, setPerson, bill, person }) {
           type="number"
           id="people"
           value={person}
-          onChange={(e) => setPerson(e.target.value)}
+          onChange={(e) => setPerson(e.target.value && Number(e.target.value))}
         />
       </div>
     </div>
