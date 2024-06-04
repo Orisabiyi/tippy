@@ -129,7 +129,9 @@ input {
   padding: 1.5rem 4rem;
   background: var(--very-light-grayish-cyan);
   border-radius: 0.7rem;
+
   font-size: 2.4rem;
+  text-align: right;
 }
 
 input::-webkit-inner-spin-button {
@@ -139,6 +141,7 @@ input::-webkit-inner-spin-button {
 button {
   text-transform: uppercase;
   color: var(--very-dark-cyan);
+  cursor: pointer;
   outline: 0;
   border: 0;
 

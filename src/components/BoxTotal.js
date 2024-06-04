@@ -12,7 +12,7 @@ export default function BoxTotal() {
 
       <div className="box-amount">
         <p>
-          <span>Tip Amount</span>
+          <span>Total</span>
           <span>/ person</span>
         </p>
         <h1>$0.00</h1>
