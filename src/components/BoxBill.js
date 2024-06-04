@@ -1,15 +1,4 @@
-import { useState } from "react";
-
-export default function BoxBill() {
-  const [bill, setBill] = useState(0);
-  const [tip, setTip] = useState(0);
-  const [person, setPerson] = useState(0);
-
-  const calculateTip = (bill / person) * (tip / 100);
-  const total = bill / person + calculateTip;
-
-  if (bill && tip && person) console.log(total);
-
+export default function BoxBill({ setBill, setTip, setPerson, bill, person }) {
   return (
     <div className="box">
       <div className="box-bill">
