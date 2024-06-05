@@ -175,6 +175,7 @@ button {
 
 button:disabled {
   background: var(--dark-grayish-cyan);
+  cursor: not-allowed;
 }
 
 img {
@@ -184,4 +185,29 @@ img {
   height: auto;
   top: 52%;
   left: 1.2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 31.25%;
+  }
+
+  .app {
+    align-items: flex-end;
+    height: 100vh;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .box-tip {
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .box-tip label {
+    grid-column: 1 / -1;
+  }
 }
