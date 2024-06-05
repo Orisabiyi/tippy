@@ -9,6 +9,7 @@ export default function BoxBill({ setBill, setTip, setPerson, bill, person }) {
           value={bill}
           onChange={(e) => setBill(e.target.value && Number(e.target.value))}
         />
+        <img src="/images/icon-dollar.svg" alt="dollar icon" />
       </div>
 
       <div className="box-tip">
@@ -21,6 +22,7 @@ export default function BoxBill({ setBill, setTip, setPerson, bill, person }) {
               <button
                 value={check}
                 onClick={(e) => setTip(Number(e.target.value))}
+                key={check}
               >
                 {check}%
               </button>
@@ -38,6 +40,7 @@ export default function BoxBill({ setBill, setTip, setPerson, bill, person }) {
           value={person}
           onChange={(e) => setPerson(e.target.value && Number(e.target.value))}
         />
+        <img src="/images/icon-person.svg" alt="person icon" />
       </div>
     </div>
   );

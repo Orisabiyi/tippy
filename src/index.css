@@ -65,6 +65,11 @@ body {
   padding: 4rem 3rem;
 }
 
+.box-bill,
+.box-people {
+  position: relative;
+}
+
 .box-bill {
   display: flex;
   flex-direction: column;
@@ -85,9 +90,9 @@ body {
 }
 
 .box-tip button {
-  padding: 1.5rem 3rem;
+  padding: 1rem 4rem;
   background: var(--very-dark-cyan);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   color: var(--color-white);
   border: 0;
   outline: 0;
@@ -163,6 +168,15 @@ button {
   border: 0;
 
   font-size: 2rem;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   border-radius: 1rem;
+}
+
+img {
+  display: inline-block;
+  position: absolute;
+  width: 1.7rem;
+  height: auto;
+  top: 52%;
+  left: 1.2rem;
 }
