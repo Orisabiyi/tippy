@@ -163,6 +163,7 @@ button {
 button {
   text-transform: uppercase;
   color: var(--very-dark-cyan);
+  background: var(--strong-cyan);
   cursor: pointer;
   outline: 0;
   border: 0;
@@ -170,6 +171,10 @@ button {
   font-size: 2rem;
   padding: 1rem 0;
   border-radius: 1rem;
+}
+
+button:disabled {
+  background: var(--dark-grayish-cyan);
 }
 
 img {

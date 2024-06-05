@@ -1,13 +1,13 @@
-export default function TipButton({ children }) {
+export default function TipButton({ tip, setTip }) {
   return (
     <div className="box-tip">
       <label>Select Tip %</label>
-      {children}
+      <Button tip={tip} setTip={setTip} />
     </div>
   );
 }
 
-export function Button({ tip, setTip }) {
+function Button({ tip, setTip }) {
   return (
     <>
       {Array.from({ length: 30 }).map((_, pct) => {

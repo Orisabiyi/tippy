@@ -1,4 +1,4 @@
-export default function BoxTotal({ bill, tip, person }) {
+export default function BoxTotal({ bill, tip, person, onReset }) {
   const checkParam = bill && tip && person;
   const calculateTip = (bill / person) * (tip / 100);
   const calculateTotal = bill / person + calculateTip;
@@ -11,7 +11,7 @@ export default function BoxTotal({ bill, tip, person }) {
           <span>/ person</span>
         </p>
 
-        <h1>${(checkParam && calculateTip) || "0.00"}</h1>
+        <h1>${(checkParam && calculateTip.toFixed(2)) || "0.00"}</h1>
       </div>
 
       <div className="box-amount">
@@ -19,10 +19,14 @@ export default function BoxTotal({ bill, tip, person }) {
           <span>Total</span>
           <span>/ person</span>
         </p>
-        <h1>${(checkParam && calculateTotal) || "0.00"}</h1>
+        <h1>${(checkParam && calculateTotal.toFixed(2)) || "0.00"}</h1>
       </div>
 
-      <button disabled>reset</button>
+      {checkParam ? (
+        <button onClick={onReset}>reset</button>
+      ) : (
+        <button disabled>reset</button>
+      )}
     </div>
   );
 }
