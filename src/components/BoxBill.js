@@ -1,4 +1,10 @@
-export default function BoxBill({ setBill, setTip, setPerson, bill, person }) {
+export default function BoxBill({
+  setBill,
+  setPerson,
+  bill,
+  person,
+  children,
+}) {
   return (
     <div className="box">
       <div className="box-bill">
@@ -12,25 +18,7 @@ export default function BoxBill({ setBill, setTip, setPerson, bill, person }) {
         <img src="/images/icon-dollar.svg" alt="dollar icon" />
       </div>
 
-      <div className="box-tip">
-        <label>Select Tip %</label>
-        {Array.from({ length: 30 }).map((_, pct) => {
-          if (!(pct / 10 >= 3) && pct / 10 <= 5 && pct % 5 === 0 && pct !== 0) {
-            const check = pct === 20 ? pct + 5 : pct === 25 ? pct * 2 : pct;
-
-            return (
-              <button
-                value={check}
-                onClick={(e) => setTip(Number(e.target.value))}
-                key={check}
-              >
-                {check}%
-              </button>
-            );
-          }
-          return "";
-        })}
-      </div>
+      {children}
 
       <div className="box-people">
         <label htmlFor="people">Number of People</label>
