@@ -1,4 +1,4 @@
-export default function TipButton({ tip, setTip, children }) {
+export default function TipButton({ children }) {
   return (
     <div className="box-tip">
       <label>Select Tip %</label>

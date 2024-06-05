@@ -4,6 +4,7 @@ import BoxBill from "./components/BoxBill";
 import BoxTotal from "./components/BoxTotal";
 import { useState } from "react";
 import TipButton, { Button } from "./components/TipButton";
+import Bill from "./components/Bill";
 
 export default function App() {
   const [bill, setBill] = useState(0);
@@ -13,16 +14,14 @@ export default function App() {
   return (
     <div className="app">
       <Main>
-        <BoxBill
-          setPerson={setPerson}
-          setBill={setBill}
-          person={person}
-          bill={bill}
-        >
+        <BoxBill setPerson={setPerson} person={person}>
+          <Bill bill={bill} setBill={setBill} />
+
           <TipButton>
             <Button tip={tip} setTip={setTip} />
           </TipButton>
         </BoxBill>
+
         <BoxTotal bill={bill} tip={tip} person={person} />
       </Main>
     </div>
