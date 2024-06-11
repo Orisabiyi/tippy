@@ -157,6 +157,7 @@ input::-webkit-inner-spin-button {
 input:focus {
   border: 2px solid var(--very-dark-cyan);
   color: var(--very-dark-cyan);
+  transition: all 0.5s;
 }
 
 input,
